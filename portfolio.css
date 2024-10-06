@@ -1,0 +1,67 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #80AF81; /* Soft background color */
+}
+
+.portfolio-section {
+    padding: 80px 50px; /* Added top padding to move content below the header */
+    background-color: #508D4E; /* Light lavender color */
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    color: #fff; /* Dark purple */
+    margin-bottom: 30px;
+}
+
+.photographer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.photographer-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photographer-item:hover {
+    transform: translateY(-5px);
+}
+
+.photographer-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.photographer-item h3 {
+    color: #333;
+}
+
+.photographer-item p {
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .photographer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+footer {
+    background-color: #508D4E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

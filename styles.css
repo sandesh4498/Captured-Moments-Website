@@ -1,0 +1,341 @@
+/* Reset some default styles and set basic global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #508D4E;
+    background-color: #f7efe5; /* Light Cream background for the whole page */
+}
+
+/* Header section styling */
+header {
+    background-color: #80AF81; /* Light Purple for nav background */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff; /* White for logo text to stand out against the purple background */
+    text-decoration: none
+}
+
+
+/* Navigation links and CTA button container */
+.nav-links-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px; /* Reduced margin for closer spacing */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* White for nav links */
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #2b064b;
+}
+
+/* Call to action button in the navigation bar */
+.cta-nav-button {
+    background-color: #0665147e; /* Orange color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 10px; /* Reduced margin-left for closer spacing to nav links */
+}
+
+.cta-nav-button:hover {
+    background-color: #03320a7e; /* Darker orange on hover */
+}
+
+/* Hero section styling */
+.hero-section {
+    background: linear-gradient(rgba(65, 136, 102, 0.8), rgba(65, 136, 102, 0.8)), url('header-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 60px; /* Add padding to account for fixed header */
+}
+
+/* Hero section content */
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the button horizontally */
+}
+
+/* Call to action button in the hero section */
+.cta-button {
+    background-color: #0665147e; /* Dark Purple */
+    color: #fff;
+    padding: 8px 16px; /* Adjust padding for smaller width */
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em; /* Optional: Reduce font size if needed */
+    transition: background-color 0.3s;
+    display: inline-block; /* Ensure button does not take full width */
+    border-radius: 10px;
+}
+.cta-button a{
+    color: #fff;
+    text-decoration: none;
+}
+.cta-button:hover {
+    background-color: #80AF81; /* Light Purple on hover */
+}
+
+/* Portfolio preview section styling */
+.portfolio-preview {
+    padding: 50px;
+    text-align: center;
+    background-color: #80AF81; /* Soft Lavender background for portfolio section */
+}
+
+.portfolio-preview h2 {
+    margin-bottom: 20px;
+    color: #674188; /* Dark Purple for headings */
+}
+
+/* Portfolio items container */
+.portfolio-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual portfolio item styling */
+.portfolio-item {
+    margin: 10px;
+    width: 200px;
+    border: 2px solid #ddd;
+    overflow: hidden;
+    transition: transform 0.2s;
+    background-color: #f7efe5; /* Light Cream background for portfolio items */
+    border-radius: 10px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Portfolio description styling */
+.portfolio-description {
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1A5319; /* Dark Purple for footer */
+    color: #fff; /* White for footer text */
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #508D4E; /* Dark Purple for nav background */
+        position: absolute;
+        top: 60px; /* Height of the nav */
+        right: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+    }
+
+    .portfolio-item {
+        width: 150px;
+    }
+
+    .cta-button {
+        padding: 7px 12px;
+        font-size: 0.8em;
+    }
+}
+
+/* Toggle button for mobile nav */
+.toggle-button {
+    display: none;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+/* Show the toggle button on small screens */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+}
+
+
+
+/* Contact Us Page Styling*/
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 50px;
+    background-color: rgba(65, 136, 85, 0.9); /* Soft Lavender background */
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    align-self: normal;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    align-self: center;
+}
+
+.contact-form button {
+    background-color: #80AF81; /* Dark Purple */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.contact-form button:hover {
+    background-color: #80AF81; /* Light Purple on hover */
+}
+
+/* Adjustments for Responsive Design */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9em;
+    }
+
+    .contact-form button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.8em;
+    }
+
+    .contact-form button {
+        padding: 7px;
+        font-size: 0.8em;
+    }
+}

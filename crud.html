@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Captured Moments</div>
+            <button class="toggle-button">&#9776;</button>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="crud-section">
+        <div class="crud-form-container">
+            <form id="crud-form" enctype="multipart/form-data">
+                <h2>Add/Edit Photo Details</h2>
+                <input type="hidden" id="photo-id" name="photoId">
+                <input type="text" id="name" name="name" placeholder="Photographer Name" required>
+                <input type="email" id="email" name="email" placeholder="Photographer Email" required>
+                <input type="file" id="photo-file" name="photoFile" accept="image/*">
+                <button type="submit" id="submit">Add Photo</button>
+                <button type="button" id="clear-form">Clear</button>
+            </form>
+        </div>
+
+        <div class="crud-table-container">
+            <table id="photos-table">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Photographer Name</th>
+                        <th>Photographer Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="crud.js"></script>
+</body>
+</html>

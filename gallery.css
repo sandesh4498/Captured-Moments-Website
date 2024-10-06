@@ -1,0 +1,80 @@
+/* Gallery Section Styling */
+.gallery-section {
+    margin-top: 78px;
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(65, 136, 103, 0.9); /* Soft Lavender background */
+}
+
+/* Gallery Header Styling */
+.gallery-section h2 {
+    margin-bottom: 20px;
+    color: #fff; /* Dark Purple for headings */
+}
+
+/* Gallery Container Styling */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Photo Item Styling */
+.photo-item {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    perspective: 1000px;
+}
+
+.photo-item-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.photo-item:hover .photo-item-inner {
+    transform: rotateY(180deg);
+}
+
+.photo-item-front,
+.photo-item-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.photo-item-front {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.photo-item-back {
+    background-color: rgba(155, 224, 188, 0.9);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.photo-item-back h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.photo-item-back p {
+    margin: 5px 0;
+    font-size: 1em;
+}

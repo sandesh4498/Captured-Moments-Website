@@ -1,0 +1,167 @@
+/* Base Styles */
+.crud-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; 
+    padding: 50px;
+    background-color: #80AF81; 
+    text-align: center;
+    color: #fff;
+}
+
+.crud-form-container {
+    margin-bottom: 30px;
+}
+
+#crud-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#crud-form input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#crud-form input[type="file"] {
+    padding: 0; 
+}
+
+#crud-form button {
+    background-color: #3f623f; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#crud-form button:hover {
+    background-color: #c8a1e0;
+}
+
+#clear-form {
+    background-color: #1A5319;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#clear-form:hover {
+    background-color: #133a12;
+}
+
+.crud-table-container {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#photos-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#photos-table th, #photos-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#photos-table th {
+    background-color: #0f320e; 
+    color: #fff;
+}
+
+#photos-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#photos-table button {
+    background-color: #0e7a0d; 
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+#photos-table button:hover {
+    background-color: #16c513;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .crud-section {
+        padding: 30px;
+    }
+
+    #crud-form {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    #crud-form input {
+        max-width: 100%;
+    }
+
+    .crud-table-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    #photos-table th, #photos-table td {
+        padding: 6px;
+    }
+
+    #photos-table button {
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .crud-section {
+        padding: 20px;
+    }
+
+    #crud-form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    #crud-form input {
+        max-width: 100%;
+    }
+
+    #clear-form, #crud-form button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .crud-table-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    #photos-table th, #photos-table td {
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    #photos-table button {
+        padding: 3px 6px;
+    }
+}
